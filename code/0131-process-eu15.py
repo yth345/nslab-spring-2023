@@ -27,11 +27,9 @@ def main():
         print(f'{city} done')
 
 
-
 def map_info(c):
     # probe_file_list = sorted(os.listdir(f'./{c}/edgs/'))
     # stream_info_file_list = sorted(os.listdir(f'./{c}/strm/'))
-
     probe_file_list = sorted(fnmatch.filter(os.listdir(f'./{c}/edgs/'), '*.tsv'))
     stream_info_file_list = sorted(fnmatch.filter(os.listdir(f'./{c}/strm/'), '*.txt'))
 
