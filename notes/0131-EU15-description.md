@@ -15,4 +15,12 @@ Each probe was mapped from the __strm/__ files that is closest earlier time to t
 - filenames: same as __edgs/__
 - columns: `hostname`, `unique_channel_cnt`, `max_viewer_cnt`, `language`
 
-### 2. Descriptive Statistics
+### 2. Server Visibility
+Each server is assigned to serve multiple channels, and each channel can also be served by multiple servers.  
+By requesting videos of a channel, we can get the hostname of the server responding to our request. Let's call the channels served by a server as ...  
+
+When selecting channels to probe, one simple strategy is to choose the channels with higher viewer count, which are potentially assigned to more servers.  Additionally, if a server can be seen from more channels, we have a higher chance to discover this server.  
+Based on this idea, the servers that
+- (1) are assigned to more channels
+- (2) has a higher maximum viewer count among the channels that can discover the server in a day
+
