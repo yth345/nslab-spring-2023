@@ -25,10 +25,13 @@ The easier-to-discover servers are the ones that have:
 - higher viewer count among its SC
 - more # of SC
 
-Based on this idea, I analyzed the servers and its SC in two phase: 
+-> plot it this way, consider servers reappear cross time period, or cross cities
 
-#### (1) City
+#### (1) Cross Time Period
+Each dot represents a unique server hostname.  
+The y-value is the maximum viewer count of its SC in a day, and the x-value is the corresponding unique channel count in that round.
 
+<img src="/images/server-from-city-all.png">
 
-#### (2) All
+#### (2) Cross Time Period and Cities
 
