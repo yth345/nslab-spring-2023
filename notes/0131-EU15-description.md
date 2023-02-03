@@ -1,7 +1,9 @@
 ## 0131 Probes from 15 Cities
 - Time: January 07 ~ 16, 18 ~ 24, year 2023
-- Probing Duration: one day each city
-- 15 Cities: Amsterdam, Berlin, Copenhagen, Frankfurt, Helsinki, London, Madrid, Marseille, Milan, Oslo, Paris, Prague, Stockholm, Vienna, Warsaw
+- Duration: one day each city
+- Frequency: 25Hz
+- Requested Channel Count: 100k
+- Probed from 15 Cities: Amsterdam, Berlin, Copenhagen, Frankfurt, Helsinki, London, Madrid, Marseille, Milan, Oslo, Paris, Prague, Stockholm, Vienna, Warsaw
 
 ### 1. Data Preprocessing
 #### (1) edgs-w-info/
@@ -15,14 +17,18 @@ Each probe was mapped from the __strm/__ files that is closest earlier time to t
 - filenames: same as __edgs/__
 - columns: `hostname`, `unique_channel_cnt`, `max_viewer_cnt`, `language`
 
-### 2. Server Visibility
-Each server is assigned to serve multiple channels, and each channel can also be served by multiple servers.  
-By requesting videos of a channel, we can get the hostname of the server responding to our request. For a server, the characteristics of served channels (SC) will influence how easy we can discover this server. 
+### 2. Server Visibility 
+Each server is assigned to serve multiple channels, and each channel may also be served by multiple servers. Thus, we can view the relationship between servers and channels as a bipartite graph.  
+Since we get a responding server by requesting channels' videos, the characteristics of the server's served channels (SC) will influence how likely we are to discover the server. 
 
-The easier-to-discover servers are the ones that have
+The easier-to-discover servers are the ones that have:
+- higher viewer count among its SC
 - more # of SC
-- higher max viewer count among SC
 
-When selecting channels to probe, one simple strategy is to choose the channels with higher viewer count, which are potentially assigned to more servers.  Additionally, if a server can be seen from more channels, we have a higher chance to discover this server.  
+Based on this idea, I analyzed the servers and its SC in two phase: 
 
+#### (1) City
+
+
+#### (2) All
 
