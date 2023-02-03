@@ -5,6 +5,7 @@
 - Requested Channel Count: 100k
 - Probed from 15 Cities: Amsterdam, Berlin, Copenhagen, Frankfurt, Helsinki, London, Madrid, Marseille, Milan, Oslo, Paris, Prague, Stockholm, Vienna, Warsaw
 
+---
 ### 1. Data Preprocessing
 Path in mbox-02: Samuel/datasets/\<dataset-name\>/\<city-name\>/
 #### (1) edgs-w-info/
@@ -22,7 +23,18 @@ Each probe was mapped from the __strm/__ files that is closest earlier time to t
 - Records the # of unique channels served by each server at each probing round.
 - columns: `server_code`, `<probe-time-1>`, `<probe-time-2>`, ...
 
-### 2. Server Visibility 
+---
+### 2. Number of Unique Channels
+Each pixel in the plot represents the # of unique channels that can discover a certain hostname at a certain probing round.
+- Darker color means that there are less # of unique channels served by a server (hostname).  
+- White space at the bottom means that there are fewer hostnames discovered at the location comparing to others.  
+- x-axis: probing rounds sorted by time, 0 is the earliest round, 21 is the latest.  
+- y-axis: labels of unique hostnames.  
+
+<img src="/images/unique-channel-cnt-all.png">
+
+---
+### 3. Server Visibility 
 Each server is assigned to serve multiple channels, and each channel may also be served by multiple servers. Thus, we can view the relationship between servers and channels as a bipartite graph.  
 Since we get a responding server by requesting channels' videos, the characteristics of the server's served channels (SC) will influence how likely we are to discover the server. 
 
