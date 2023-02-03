@@ -33,6 +33,10 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 
 <img src="/images/unique-channel-cnt-all.png">
 
+If a server is assigned to serve only a few channels (dark pixel), this server will potentially be harder for us to discover.  
+Thus, if there is a wide dark part in the plot, e.g., Berlin, it may be harder for us to find all hostnames.  
+On the other hand, the bright rows may indicate it is a main server serving the area.
+
 ---
 ### 3. Server Visibility 
 Each server is assigned to serve multiple channels, and each channel may also be served by multiple servers. Thus, we can view the relationship between servers and channels as a bipartite graph.  
