@@ -36,7 +36,11 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 - x-axis: probing rounds sorted by time. 0 is the earliest round, the larger the numbers, the later the probes.  
 - y-axis: labels of unique hostnames.  
 
+#### (1) hostname sorted by time of discovery
 <img src="/images/unique-channel-cnt-all.png">
+
+#### (2) hostname sorted by subnet and server code
+<img src="/images/unique-channel-cnt-sorted.png">
 
 If a server is assigned to serve only a few channels (dark pixel), this server will potentially be harder for us to discover.  
 Thus, if there is a wide dark part in the plot, e.g., Berlin, it may be harder for us to find all hostnames.  
@@ -49,7 +53,11 @@ Note that when a hostname is not discovered at a probing round, the max viewer c
 - x-axis: probing rounds sorted by time. 0 is the earliest round, the larger the numbers, the later the probes.  
 - y-axis: labels of unique hostnames.  
 
+#### (1) hostname sorted by time of discovery
 <img src="/images/max-viewer-cnt-all.png">
+
+#### (2) hostname sorted by subnet and server code
+<img src="/images/max-viewer-cnt-sorted.png">
 
 We can see that the rare servers (connected to only a few channels) are assigned differently among cities.  
 For example, Berlin and Copenhagen both have a large amount of rare servers. However, Berlin's rare servers seem to be clustered and switching as time goes on, while Copenhagen's rare servers all appear at a same time period.
