@@ -22,13 +22,14 @@ Each probe was mapped from the __strm/__ files that is closest earlier time to t
 #### (3) unique-ch-cnt.csv
 - Records the # of unique channels served by each server at each probing round.
 - columns: `server_code`, `<probe-time-1>`, `<probe-time-2>`, ...
+- Number of probing rounds from each city: Amsterdam(20), Berlin(24), Copenhagen(24), Frankfurt(25), Helsinki(25), London(23), Madrid(23), Marseille(25), Milan(24), Oslo(23), Paris(26), Prague(24), Stockholm(23), Vienna(24), Warsaw(24)
 
 ---
 ### 2. Number of Unique Channels
 Each pixel in the plot represents the # of unique channels that can discover a certain hostname at a certain probing round.
 - Darker color means that there are less # of unique channels served by a server (hostname).  
 - White space at the bottom means that there are fewer hostnames discovered at the location comparing to others.  
-- x-axis: probing rounds sorted by time, 0 is the earliest round, 21 is the latest.  
+- x-axis: probing rounds sorted by time. 0 is the earliest round, the larger the numbers, the later the probes.  
 - y-axis: labels of unique hostnames.  
 
 <img src="/images/unique-channel-cnt-all.png">
@@ -38,7 +39,10 @@ Thus, if there is a wide dark part in the plot, e.g., Berlin, it may be harder f
 On the other hand, the bright rows may indicate it is a main server serving the area.
 
 ---
-### 3. Server Visibility 
+### 3. Maximum Viewer Count
+
+---
+### 4. Server Visibility 
 Each server is assigned to serve multiple channels, and each channel may also be served by multiple servers. Thus, we can view the relationship between servers and channels as a bipartite graph.  
 Since we get a responding server by requesting channels' videos, the characteristics of the server's served channels (SC) will influence how likely we are to discover the server. 
 
@@ -56,3 +60,6 @@ The y-value is the maximum viewer count of its SC in a day, and the x-value is t
 
 #### (2) Cross Time Period and Cities
 
+---
+### 5. To-Do
+1. How much does the servers overlap across cities?
