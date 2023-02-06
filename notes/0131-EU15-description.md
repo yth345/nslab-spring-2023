@@ -55,15 +55,37 @@ Note that when a hostname is not discovered at a probing round, the max viewer c
 
 #### (1) hostname sorted by time of discovery
 <img src="/images/max-viewer-cnt-all.png">
+We can see that the rare servers (connected to only a few channels) are assigned differently among cities.  
+For example, Berlin and Copenhagen both have a large amount of rare servers. However, Berlin's rare servers seem to be clustered and switching as time goes on, while Copenhagen's rare servers all appear at a same time period.
 
 #### (2) hostname sorted by subnet and server code
 <img src="/images/max-viewer-cnt-sorted.png">
 
-We can see that the rare servers (connected to only a few channels) are assigned differently among cities.  
-For example, Berlin and Copenhagen both have a large amount of rare servers. However, Berlin's rare servers seem to be clustered and switching as time goes on, while Copenhagen's rare servers all appear at a same time period.
+---
+### 4. Subnets
+
+\# of subnets from each city: Amsterdam(2), Berlin(20), Copenhagen(18), Frankfurt(5), Helsinki(3), London(2), Madrid(1), Marseille(7), Milan(1), Oslo(5), Paris(3), Prague(18), Stockholm(2), Vienna(1), Warsaw(7)
+
+| Country     | \# of subnets | Main Subnet(s) | Other subnets |
+| ----------- | ------------- | -------------- | ------------- |
+| Amesterdam  | 2             | ams02, ams03   |               |
+| Berlin      | 20            | fra06          | ams02, ams03, arn03, arn04, cdg02, cdg10, cph01, dus01, fra02, hel03, lhr03, mad01, mil02, mrs02, muc01, osl01, prg03, vie02, waw02 |
+| Copenhagen* | 18            | mia05          | atl01, den52, dfw02, iad03, __iah50__, jfk04, lax03, ord03, ord56, pdx01, phx01, qro03, sea02, sjc06, slc01, ymq03, yto01 |
+| Frankfurt   | 5             | lhr08, mrs02   | ams02, cdg02, fra06 |
+| Helsinki    | 3             | arn03, waw02   | fra02         |
+| London      | 2             | lhr08          | lhr03         |
+| Madrid      | 1             | mad01          |               |
+| Marseille   | 7             | mrs02          | cdg02, cdg10, fra02, mad01, mil02, waw02 |
+| Milan       | 1             | mil01          |               |
+| Oslo        | 5             | lhr08, mrs02   | ams02, cdg02, fra06 |
+| Paris       | 3             | cdg02          | ams02, vie02  |
+| Prague*     | 18            | slc01          | atl01, den52, dfw02, iad03, iah50, jfk04, jfk06, lax03, ord03, ord56, pdx01, phx01, qro03, sea02, sjc06, ymq03, yto01 |
+| Stockholm   | 2             | prg03          | dus01         |
+| Vienna      | 1             | prg03          |               |
+| Warsaw      | 7             | waw02          | ams02, ams03, fra05, fra06, lhr03, lhr08 |
 
 ---
-### 4. Server Visibility 
+### 5. Server Visibility 
 Each server is assigned to serve multiple channels, and each channel may also be served by multiple servers. Thus, we can view the relationship between servers and channels as a bipartite graph.  
 Since we get a responding server by requesting channels' videos, the characteristics of the server's served channels (SC) will influence how likely we are to discover the server. 
 
@@ -82,5 +104,5 @@ The y-value is the maximum viewer count of its SC in a day, and the x-value is t
 #### (2) Cross Time Period and Cities
 
 ---
-### 5. To-Do
+### 6. To-Do
 1. How much does the servers overlap across cities?
