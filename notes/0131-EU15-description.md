@@ -22,6 +22,8 @@ Each probe was mapped from the __strm/__ files that is closest earlier time to t
 #### (3) unique-ch-cnt.csv
 - Records the # of unique channels served by each server at each probing round.
 - columns: `server_code`, `<probe-time-1>`, `<probe-time-2>`, ...
+- `server_code` is <3-digits IATA code>.<6-digits hexadecimal server code> from the hostname.   
+For example, if the hostname is `video-edge-d544bc.ams02.abs.hls.ttvnw.net`, the server code would be `ams02.d544bc`
 - Number of probing rounds from each city: Amsterdam(20), Berlin(24), Copenhagen(24), Frankfurt(25), Helsinki(25), London(23), Madrid(23), Marseille(25), Milan(24), Oslo(23), Paris(26), Prague(24), Stockholm(23), Vienna(24), Warsaw(24)
 
 #### (4) max-viewer-cnt.csv
@@ -83,7 +85,7 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 | Vienna      | 1             | prg03          |               |
 | Warsaw      | 7             | waw02          | ams02, ams03, fra05, fra06, lhr03, lhr08 |
 
-\*: Server located in the US instead of EU.
+\*: Server located in the North America (+ Mexico) instead of EU.
 
 #### (1) Server Location
 - __Type 1: Main Subnet Airport Code Matches City__  
@@ -110,8 +112,9 @@ Copenhagen - `mia05` (Miami, US)
 Prague - `slc01` (Salt Lake City, US)
 
 #### (2) Server Functionality
-- The servers that have a main serving area also help serve requests from other cities.
-- The supporting subnets (those that do not appear to be a main server in a city) include: `arn04, cdg10, cph01, dus01, fra02, hel03, lhr03, muc01, osl01, vie02`, and most servers in North America.
+- The subnets that have a main serving area also help serve requests from other cities.
+- __Question to answer:__ Even though they have the same subnet, is the main server in a city the same as the supporting server in another city? If so, we could save some work.
+- The supporting subnets (those that do not appear to be a main server in a city) include: `arn04, cdg10, cph01, dus01, fra02, hel03, lhr03, muc01, osl01, vie02`, and most servers in North America. These servers could be a main server in other cities, or they are just assigned to support main servers.
 - The supporting subnets as well as the subnets not discovered in this experiment are the most critical part for us to find Twitch's complete edge servers.
 
 ---
