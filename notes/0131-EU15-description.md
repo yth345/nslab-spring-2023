@@ -85,8 +85,8 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 
 \*: Server located in the US instead of EU.
 
-### (1) Server Location
-#### - Type 1: Main Subnet Airport Code Matches City
+#### (1) Server Location
+- __Type 1: Main Subnet Airport Code Matches City__  
 Amesterdam - `ams02` & `ams03` (Netherlands)  
 London - `lhr08` (UK)  
 Madrid - `mad01` (Spain)  
@@ -95,28 +95,29 @@ Milan - `mil01` (Italy)
 Paris - `cdg02` (France)  
 Warsaw - `waw02` (Poland)
 
-#### - Type 2: Main Subnet Airport Code Matches Country
+- __Type 2: Main Subnet Airport Code Matches Country__  
 Berlin - `fra06` (Frankfurt, Germany)  
 
-#### - Type 3: Main Subnet Airport Code Matches Continent
+- __Type 3: Main Subnet Airport Code Matches Continent__  
 Frankfurt - `lhr08` (London, UK) & `mrs02` (Marseille, France)  
 Helsinki - `arn03` (Stockholm, Sweden) & `waw02` (Warsaw, Poland)    
 Oslo - `lhr08` (London, UK) & `mrs02` (Marseille, France)  
 Stockholm - `prg03` (Prague, Czech Republic)  
 Vienna - `prg03` (Prague, Czech Republic)  
 
-#### - Type 4: Main Subnet at Different Continent
+- __Type 4: Main Subnet at Different Continent__  
 Copenhagen - `mia05` (Miami, US)  
 Prague - `slc01` (Salt Lake City, US)
 
-### (2) Server Functionality
-- The servers that have an main serving area also help serve requests from other cities.
-- The subnets that do not appear to be a main server in a city include: `arn04, cdg10, cph01, dus01, fra02, hel03, lhr03, muc01, osl01, vie02`, and most servers in North America.
+#### (2) Server Functionality
+- The servers that have a main serving area also help serve requests from other cities.
+- The supporting subnets (those that do not appear to be a main server in a city) include: `arn04, cdg10, cph01, dus01, fra02, hel03, lhr03, muc01, osl01, vie02`, and most servers in North America.
+- The supporting subnets as well as the subnets not discovered in this experiment are the most critical part for us to find Twitch's complete edge servers.
 
 ---
-### 4. Subnets in EU & NA Not Discovered 
+### 4. Undiscovered Subnets in EU & NA 
 By reverse DNS lookup, we know there are 28 different subnets in Europe, and 25 different subnets in North America.  
 However, not all subnets were discovered in our experiment. The following are the undiscovered subnets in EU and NA:
-- EU: `arn04, ber01, lhr04, mad02, prg02, waw01, hel01` (Note: `ber01` is the only subnet with airport code in Berlin.)
+- EU: `ber01, lhr04, mad02, prg02, waw01, hel01` (Note: `ber01` is the only subnet with airport code in Berlin.)
 - NA: `den01, hou01, iad05, jfk50, ord02, sea01, sjc05`
 
