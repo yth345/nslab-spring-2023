@@ -75,7 +75,7 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 | London      | 2             | lhr08          | lhr03         |
 | Madrid      | 1             | mad01          |               |
 | Marseille   | 7             | mrs02          | cdg02, cdg10, fra02, mad01, mil02, waw02 |
-| Milan       | 1             | mil01          |               |
+| Milan       | 1             | mil02          |               |
 | Oslo        | 5             | lhr08, mrs02   | ams02, cdg02, fra06 |
 | Paris       | 3             | cdg02          | ams02, vie02  |
 | Prague*     | 18            | slc01          | atl01, den52, dfw02, iad03, iah50, jfk04, jfk06, lax03, ord03, ord56, pdx01, phx01, qro03 (Mexico), sea02, sjc06, ymq03, yto01 |
@@ -87,39 +87,36 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 
 ### (1) Server Location
 #### - Type 1: Main Subnet Airport Code Matches City
-Amesterdam - ams02 & ams03 (Netherlands)  
-London - lhr08 (UK)  
-Madrid - mad01 (Spain)  
-Marseille - mrs02 (France)  
-Milan - mil01 (Italy)  
-Paris - cdg02 (France)  
-Warsaw - waw02 (Poland)
+Amesterdam - `ams02` & `ams03` (Netherlands)  
+London - `lhr08` (UK)  
+Madrid - `mad01` (Spain)  
+Marseille - `mrs02` (France)  
+Milan - `mil01` (Italy)  
+Paris - `cdg02` (France)  
+Warsaw - `waw02` (Poland)
 
 #### - Type 2: Main Subnet Airport Code Matches Country
-Berlin - fra06 (Frankfurt, Germany)  
+Berlin - `fra06` (Frankfurt, Germany)  
 
 #### - Type 3: Main Subnet Airport Code Matches Continent
-Frankfurt - lhr08 (London, UK) & mrs02 (Marseille, France)  
-Helsinki - arn03 (Stockholm, Sweden) & waw02 (Warsaw, Poland)    
-Oslo - lhr08 (London, UK) & mrs02 (Marseille, France)  
-Stockholm - prg03 (Prague, Czech Republic)  
-Vienna - prg03 (Prague, Czech Republic)  
+Frankfurt - `lhr08` (London, UK) & `mrs02` (Marseille, France)  
+Helsinki - `arn03` (Stockholm, Sweden) & `waw02` (Warsaw, Poland)    
+Oslo - `lhr08` (London, UK) & `mrs02` (Marseille, France)  
+Stockholm - `prg03` (Prague, Czech Republic)  
+Vienna - `prg03` (Prague, Czech Republic)  
 
 #### - Type 4: Main Subnet at Different Continent
-Copenhagen - mia05 (Miami, US)  
-Prague - slc01 (Salt Lake City, US)
+Copenhagen - `mia05` (Miami, US)  
+Prague - `slc01` (Salt Lake City, US)
 
 ### (2) Server Functionality
-#### - Type 1: Serve Main Area Only
-
-#### - Type 2: Serve Main Area + Help Other Areas
-
-#### - Type 3: Help Other Areas Only
+- The servers that have an main serving area also help serve requests from other cities.
+- The subnets that do not appear to be a main server in a city include: `arn04, cdg10, cph01, dus01, fra02, hel03, lhr03, muc01, osl01, vie02`, and most servers in North America.
 
 ---
 ### 4. Subnets in EU & NA Not Discovered 
 By reverse DNS lookup, we know there are 28 different subnets in Europe, and 25 different subnets in North America.  
 However, not all subnets were discovered in our experiment. The following are the undiscovered subnets in EU and NA:
-- __EU:__ arn04, __ber01__, lhr04, mad02, prg02, waw01, hel01 (__ber01__ is the only subnet with Berlin airport code.)
-- __NA:__ den01, hou01, iad05, jfk50, ord02, sea01, sjc05
+- EU: `arn04, ber01, lhr04, mad02, prg02, waw01, hel01` (Note: `ber01` is the only subnet with airport code in Berlin.)
+- NA: `den01, hou01, iad05, jfk50, ord02, sea01, sjc05`
 
