@@ -39,12 +39,13 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 #### (1) hostname sorted by time of discovery
 <img src="/images/unique-channel-cnt-all.png">
 
-#### (2) hostname sorted by subnet and server code
-<img src="/images/unique-channel-cnt-sorted.png">
-
 If a server is assigned to serve only a few channels (dark pixel), this server will potentially be harder for us to discover.  
 Thus, if there is a wide dark part in the plot, e.g., Berlin, it may be harder for us to find all hostnames.  
 On the other hand, a bright row may indicate it is a main server serving the area.
+
+#### (2) hostname sorted by subnet and server code
+<img src="/images/unique-channel-cnt-sorted.png">
+
 
 ---
 ### 3. Ln Maximum Viewer Count
@@ -62,15 +63,13 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 <img src="/images/max-viewer-cnt-sorted.png">
 
 ---
-### 4. Subnets
+### 4. Subnets Discovered
 
-\# of subnets from each city: Amsterdam(2), Berlin(20), Copenhagen(18), Frankfurt(5), Helsinki(3), London(2), Madrid(1), Marseille(7), Milan(1), Oslo(5), Paris(3), Prague(18), Stockholm(2), Vienna(1), Warsaw(7)
-
-| Country     | \# of subnets | Main Subnet(s) | Other subnets |
+| City        | \# of subnets | Main Subnet(s) | Other subnets |
 | ----------- | ------------- | -------------- | ------------- |
 | Amesterdam  | 2             | ams02, ams03   |               |
 | Berlin      | 20            | fra06          | ams02, ams03, arn03, arn04, cdg02, cdg10, cph01, dus01, fra02, hel03, lhr03, mad01, mil02, mrs02, muc01, osl01, prg03, vie02, waw02 |
-| Copenhagen* | 18            | mia05          | atl01, den52, dfw02, iad03, __iah50__, jfk04, lax03, ord03, ord56, pdx01, phx01, qro03, sea02, sjc06, slc01, ymq03, yto01 |
+| Copenhagen* | 18            | mia05          | atl01, den52, dfw02, iad03, iah50, jfk04, lax03, ord03, ord56, pdx01, phx01, qro03 (Mexico), sea02, sjc06, slc01, ymq03, yto01 |
 | Frankfurt   | 5             | lhr08, mrs02   | ams02, cdg02, fra06 |
 | Helsinki    | 3             | arn03, waw02   | fra02         |
 | London      | 2             | lhr08          | lhr03         |
@@ -79,30 +78,48 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 | Milan       | 1             | mil01          |               |
 | Oslo        | 5             | lhr08, mrs02   | ams02, cdg02, fra06 |
 | Paris       | 3             | cdg02          | ams02, vie02  |
-| Prague*     | 18            | slc01          | atl01, den52, dfw02, iad03, iah50, jfk04, jfk06, lax03, ord03, ord56, pdx01, phx01, qro03, sea02, sjc06, ymq03, yto01 |
+| Prague*     | 18            | slc01          | atl01, den52, dfw02, iad03, iah50, jfk04, jfk06, lax03, ord03, ord56, pdx01, phx01, qro03 (Mexico), sea02, sjc06, ymq03, yto01 |
 | Stockholm   | 2             | prg03          | dus01         |
 | Vienna      | 1             | prg03          |               |
 | Warsaw      | 7             | waw02          | ams02, ams03, fra05, fra06, lhr03, lhr08 |
 
+\*: Server located in the US instead of EU.
+
+### (1) Server Location
+#### Type 1: Main Subnet Airport Code Matches City
+Amesterdam - ams02 & ams03 (Netherlands)  
+London - lhr08 (UK)  
+Madrid - mad01 (Spain)  
+Marseille - mrs02 (France)  
+Milan - mil01 (Italy)  
+Paris - cdg02 (France)  
+Warsaw - waw02 (Poland)
+
+#### Type 2: Main Subnet Airport Code Matches Country
+Berlin - fra06 (Frankfurt, Germany)  
+
+#### Type 3: Main Subnet Airport Code Matches Continent
+Frankfurt - lhr08 (London, UK) & mrs02 (Marseille, France)  
+Helsinki - arn03 (Stockholm, Sweden) & waw02 (Warsaw, Poland)    
+Oslo - lhr08 (London, UK) & mrs02 (Marseille, France)  
+Stockholm - prg03 (Prague, Czech Republic)  
+Vienna - prg03 (Prague, Czech Republic)  
+
+#### Type 4: Main Subnet at Different Continent
+Copenhagen - mia05 (Miami, US)  
+Prague - slc01 (Salt Lake City, US)
+
+### (2) Server Functionality
+#### Type 1: Serve Main Area Only
+
+#### Type 2: Serve Main Area + Help Other Areas
+
+#### Type 3: Help Other Areas Only
+
 ---
-### 5. Server Visibility 
-Each server is assigned to serve multiple channels, and each channel may also be served by multiple servers. Thus, we can view the relationship between servers and channels as a bipartite graph.  
-Since we get a responding server by requesting channels' videos, the characteristics of the server's served channels (SC) will influence how likely we are to discover the server. 
+### 4. Subnets in EU & NA Not Discovered 
+By reverse DNS lookup, we know there are 28 different subnets in Europe, and 25 different subnets in North America.  
+However, not all subnets were discovered in our experiment. The following are the undiscovered subnets in EU and NA:
+- __EU:__ arn04, __ber01__, lhr04, mad02, prg02, waw01, hel01 (__ber01__ is the only subnet with Berlin airport code.)
+- __NA:__ den01, hou01, iad05, jfk50, ord02, sea01, sjc05
 
-The easier-to-discover servers are the ones that have:
-- higher viewer count among its SC
-- more # of SC
-
--> plot it this way, consider servers reappear cross time period, or cross cities
-
-#### (1) Cross Time Period
-Each dot represents a unique server hostname.  
-The y-value is the maximum viewer count of its SC in a day, and the x-value is the corresponding unique channel count in that round.
-
-<img src="/images/server-from-city-all.png">
-
-#### (2) Cross Time Period and Cities
-
----
-### 6. To-Do
-1. How much does the servers overlap across cities?
