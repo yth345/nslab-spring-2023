@@ -86,7 +86,7 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 \*: Server located in the US instead of EU.
 
 ### (1) Server Location
-#### Type 1: Main Subnet Airport Code Matches City
+#### - Type 1: Main Subnet Airport Code Matches City
 Amesterdam - ams02 & ams03 (Netherlands)  
 London - lhr08 (UK)  
 Madrid - mad01 (Spain)  
@@ -95,26 +95,26 @@ Milan - mil01 (Italy)
 Paris - cdg02 (France)  
 Warsaw - waw02 (Poland)
 
-#### Type 2: Main Subnet Airport Code Matches Country
+#### - Type 2: Main Subnet Airport Code Matches Country
 Berlin - fra06 (Frankfurt, Germany)  
 
-#### Type 3: Main Subnet Airport Code Matches Continent
+#### - Type 3: Main Subnet Airport Code Matches Continent
 Frankfurt - lhr08 (London, UK) & mrs02 (Marseille, France)  
 Helsinki - arn03 (Stockholm, Sweden) & waw02 (Warsaw, Poland)    
 Oslo - lhr08 (London, UK) & mrs02 (Marseille, France)  
 Stockholm - prg03 (Prague, Czech Republic)  
 Vienna - prg03 (Prague, Czech Republic)  
 
-#### Type 4: Main Subnet at Different Continent
+#### - Type 4: Main Subnet at Different Continent
 Copenhagen - mia05 (Miami, US)  
 Prague - slc01 (Salt Lake City, US)
 
 ### (2) Server Functionality
-#### Type 1: Serve Main Area Only
+#### - Type 1: Serve Main Area Only
 
-#### Type 2: Serve Main Area + Help Other Areas
+#### - Type 2: Serve Main Area + Help Other Areas
 
-#### Type 3: Help Other Areas Only
+#### - Type 3: Help Other Areas Only
 
 ---
 ### 4. Subnets in EU & NA Not Discovered 
