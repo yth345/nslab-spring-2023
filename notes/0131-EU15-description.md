@@ -69,7 +69,7 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 
 | City        | \# of subnets | Main Subnet(s) | Other subnets |
 | ----------- | ------------- | -------------- | ------------- |
-| Amesterdam  | 2             | ams02, ams03   |               |
+| Amsterdam   | 2             | ams02, ams03   |               |
 | Berlin      | 20            | fra06          | ams02, ams03, arn03, arn04, cdg02, cdg10, cph01, dus01, fra02, hel03, lhr03, mad01, mil02, mrs02, muc01, osl01, prg03, vie02, waw02 |
 | Copenhagen* | 18            | mia05          | atl01, den52, dfw02, iad03, iah50, jfk04, lax03, ord03, ord56, pdx01, phx01, qro03 (Mexico), sea02, sjc06, slc01, ymq03, yto01 |
 | Frankfurt   | 5             | lhr08, mrs02   | ams02, cdg02, fra06 |
@@ -89,7 +89,7 @@ For example, Berlin and Copenhagen both have a large amount of rare servers. How
 
 #### (1) Server Location
 - __Type 1: Main Subnet Airport Code Matches City__  
-Amesterdam - `ams02` & `ams03` (Netherlands)  
+Amsterdam - `ams02` & `ams03` (Netherlands)  
 London - `lhr08` (UK)  
 Madrid - `mad01` (Spain)  
 Marseille - `mrs02` (France)  
