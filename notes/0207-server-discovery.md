@@ -11,22 +11,22 @@ Next, I want to know whether the servers in the subnet are the same in different
 
 The following is the summary table of repeated subnets:
 
-| Subnet  | Main serving city | Other serving cities    |
-| ------- | ----------------- | ----------------------- |
-| ams02   | Amsterdam         | Berlin, Frankfurt, Oslo, Paris, Warsaw |
-| ams03   | Amsterdam         | Berlin, Warsaw          |
-| fra06   | Berlin            | Frankfurt, Oslo, Warsaw |
-| arn03   | Helsinki          | Berlin                  | 
-| lhr08   | London            | Frankfurt, Oslo, Warsaw |
-| mad01   | Madrid            | Marseille               |
-| mrs02   | Marseille         | Berlin, Frankfurt, Oslo |
-| mil02   | Milan             | Berlin, Marseille       |
-| cdg02   | Paris             | Berlin, Frankfurt, Marseille, Oslo |
-| prg03   | Stockholm, Vienna | Berlin                  |
-| waw02   | Warsaw            | Berlin, Helsinki, Marseille |
-| dus01   | (Maybe) Stockholm | Berlin                  |
-| fra02   | (Maybe) Helsinki  | Berlin, Marseille       |
-| cdg10   | -                 | Berlin, Marseille       |
-| lhr03   | -                 | Berlin, London, Warsaw  |
-| view02  | -                 | Berlin, Paris           |
+| Subnet  | Main serving city | # of unique servers from main | Other serving cities    | # of unique servers from other | Main city can cover |
+| ------- | ----------------- | --------------------- | ----------------------- | ---------------------- | ------------------- |
+| ams02   | Amsterdam         | 25                    | Berlin, Frankfurt, Oslo, Paris, Warsaw | 25      | Yes |
+| ams03   | Amsterdam         | 30                    | Berlin, Warsaw          | 23                     | Yes |
+| fra06   | Berlin            | 31                    | Frankfurt, Oslo, Warsaw | 31                     | Yes |
+| arn03   | Helsinki          | 63                    | Berlin                  | 18                     | Yes |
+| lhr08   | London            | 16                    | Frankfurt, Oslo, Warsaw | 16                     | Yes |
+| mad01   | Madrid            | 66                    | Marseille               | 50                     | Yes |
+| mrs02   | Marseille         | 18                    | Berlin, Frankfurt, Oslo | 18                     | Yes |
+| mil02   | Milan             | 46                    | Berlin, Marseille       | 42                     | Yes |
+| cdg02   | Paris             | 101                   | Berlin, Frankfurt, Marseille, Oslo | 101         | Yes |
+| prg03   | Stockholm, Vienna | Two cities has identical 11 servers | Berlin    | 10                     | Yes |
+| waw02   | Warsaw            | 27                    | Berlin, Helsinki, Marseille | 27                 | Yes |
+| dus01   | (Maybe) Stockholm | 51                    | Berlin                  | 12                     | Yes |
+| fra02   | (Maybe) Helsinki  | 53                    | Berlin, Marseille       | 41                     | No, diff cnt: 3 |
+| cdg10   | -                 | -                     | Berlin, Marseille       | 41                     | -   |
+| lhr03   | -                 | -                     | Berlin, London, Warsaw  | 31                     | -   |
+| vie02   | -                 | -                     | Berlin, Paris           | 39                     | -   |
 
