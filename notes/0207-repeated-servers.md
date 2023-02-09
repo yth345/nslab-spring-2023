@@ -1,13 +1,15 @@
-## 0207 Server Discovery
+## 0207 Repeated Servers
 
 - Dataset: EU15
 - Time: January 07 ~ 16, 18 ~ 24, year 2023
 
 
-### 1. Repeated Servers
+### 1. Repeated Servers in Same Subnet, Different City
 
 Last week, we found out that a subnet can be discovered from different cities. 
-Next, I want to know whether the servers in the subnet are the same in different cities' probes.
+Next, I want to know whether the servers in the subnet are exactly the same in different cities' probes.  
+
+The benefit of this is that if we can find a server, say server A, by probing top viewing channels in server A's main serving city, then there is no need for us to probe up to 100k channels in other cities just to find server A. 
 
 The following is the summary table of repeated subnets:
 
@@ -29,4 +31,13 @@ The following is the summary table of repeated subnets:
 | cdg10   | -                 | -                     | Berlin, Marseille       | 41                     | -   |
 | lhr03   | -                 | -                     | Berlin, London, Warsaw  | 31                     | -   |
 | vie02   | -                 | -                     | Berlin, Paris           | 39                     | -   |
+
+By checking the repeated servers, we know that probing a main serving city of a subnet could let us find most of the server IPs.  
+That is to say, probing top viewer count channels from a diversity of cities may be a good enough strategy.  
+
+### 2. Plotting
+
+To understand how well this strategy works, I plotted ...
+
+
 
