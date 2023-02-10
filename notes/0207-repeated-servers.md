@@ -3,7 +3,7 @@
 - Dataset: EU15
 - Time: January 07 ~ 16, 18 ~ 24, year 2023
 
-
+---
 ### 1. Repeated Servers in Same Subnet, Different City
 
 Last week, we found out that a subnet can be discovered from different cities. 
@@ -35,9 +35,35 @@ The following is the summary table of repeated subnets:
 By checking the repeated servers, we know that probing a main serving city of a subnet could let us find most of the server IPs.  
 That is to say, probing top viewer count channels from a diversity of cities may be a good enough strategy.  
 
-### 2. Plotting
+---
+### 2. IP Coverage Ratio v.s. Probed Channel %
 
-To understand how well this strategy works, I plotted ...
+To understand the performance of this strategy, I took a look at the increase of IP coverage ratio when we increase the percentage of top viewer channels we probed at each round.
+- x-axis: __top viewer channel percentage__, ranges from 0% to 100%, plotted every 1%. 1% means that we probed the top 1% viewer channels each round, and 100% means that we probe as much live channels we see up to 100k channels.
+- y-axis: __IP coverage ratio__, the amount of unique IPs we see by probing a certain % of channels divided by the total unique IPs we get by probing all channels.
 
+#### (1) Probed from Different Cities Seperately
+
+- For most cities, probing the top 1% viewer channels gives us the complete IPs.  
+- However, to get 80% of IPs, we need to probe 18% of channels in Paris, 24% in London, 39% in Marseille, 60% in Copenhagen, 69% in Warsaw, and 70% in Berlin.
+
+-> Through the observation in Section 1., we can cut down on the % of channels we probe if we probed from different cities together.
+
+<img src="/images/ip-coverage.png">
+
+- We can also see that the cities that needs significantly more probes, Berlin, Copenhagen, London, Marseille, Paris, and Warsaw, are the cities that has a dark area in the "ln max viewer count plots" in last week.
+
+<img src="/images/max-viewer-cnt-all.png">
+
+
+#### (2) Probed from Different Cities Together
+
+The good news is if we probed from all 15 cities together,  
+we can easily get over 80% of IP coverage by only probing the top 1% viewer count channels,  
+and get 90% of IP coverage by probing the top 20% viewer count channels.
+
+Therefore, I would suggest we probe the top 1% viewer count channels from as many locations as we can.
+
+<img src="/images/EU-15-ip-coverage.png" width="600">
 
 
