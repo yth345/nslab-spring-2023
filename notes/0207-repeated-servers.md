@@ -9,7 +9,7 @@
 Last week, we found out that a subnet can be discovered from different cities. 
 Next, I want to know whether the servers in the subnet are exactly the same in different cities' probes.  
 
-The benefit of this is that if we can find a server, say server A, by probing top viewing channels in server A's main serving city, then there is no need for us to probe up to 100k channels in other cities just to find server A. 
+The benefit of this is that if we can find a server, say server A, by probing top viewing channels in server A's main serving city, then there is no need for us to probe up to 100k channels in other cities to find server A. 
 
 The following is the summary table of repeated subnets:
 
@@ -62,7 +62,7 @@ The good news is if we probed from all 15 cities together,
 we can easily get over 80% of IP coverage by only probing the top 1% viewer count channels,  
 and get 90% of IP coverage by probing the top 20% viewer count channels.
 
-Therefore, I would suggest we probe the top 1% viewer count channels from as many locations as we can.
+Therefore, I would suggest we probe the top 1% viewer count channels from a diversity of locations.
 
 <img src="/images/EU-15-ip-coverage.png" width="600">
 
