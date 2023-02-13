@@ -39,13 +39,13 @@ That is to say, probing top viewer count channels from a diversity of cities may
 ### 2. IP Coverage Ratio v.s. Probed Channel %
 
 To understand the performance of this strategy, I took a look at the increase of IP coverage ratio when we increase the percentage of top viewer channels we probed at each round.
-- x-axis: __top viewer channel percentage__, ranges from 0% to 100%, plotted every 1%. 1% means that we probed the top 1% viewer channels each round, and 100% means that we probe as much live channels we see up to 100k channels.
+- x-axis: __top viewer channel percentage__, ranges from 0% to 100%, plotted every 0.5%. 1% means that we probed the top 1% viewer channels each round, and 100% means that we probe as much live channels we see up to 100k channels.
 - y-axis: __IP coverage ratio__, the amount of unique IPs we see by probing a certain % of channels divided by the total unique IPs we get by probing all channels.
 
 #### (1) Probed from Different Cities Seperately
 
-- For most cities, probing the top 1% viewer channels gives us the complete IPs.  
-- However, to get 80% of IPs, we need to probe 18% of channels in Paris, 24% in London, 39% in Marseille, 60% in Copenhagen, 69% in Warsaw, and 70% in Berlin.
+- For most cities, probing the top 0.5% viewer channels gives us the complete IPs.  
+- However, to get 80% of IPs, we need to probe 19% of channels in Paris, 24.5% in London, 39% in Marseille, 56% in Warsaw, 60% in Copenhagen, 56% in Warsaw, and 70.5% in Berlin.
 
 -> Through the observation in Section 1., we can cut down on the % of channels we probe if we probed from different cities together.
 
