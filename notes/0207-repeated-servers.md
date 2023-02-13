@@ -58,11 +58,11 @@ To understand the performance of this strategy, I took a look at the increase of
 
 #### (2) Probed from Different Cities Together
 
-The good news is if we probed from all 15 cities together,  
-we can easily get over 80% of IP coverage by only probing the top 1% viewer count channels,  
+On the other hand, if we probed from all 15 cities together,  
+we can easily get over 80% of IP coverage by only probing the top 0.5% viewer count channels,  
 and get 90% of IP coverage by probing the top 20% viewer count channels.
 
-Therefore, I would suggest we probe the top 1% viewer count channels from a diversity of locations.
+Therefore, I think a good strategy is that we probe the top 0.5% (or top 1% to be conservative) viewer count channels from diverse locations.
 
 <img src="/images/EU-15-ip-coverage.png" width="600">
 
