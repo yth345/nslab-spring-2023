@@ -5,13 +5,12 @@ from tqdm import tqdm
 
 
 def main():
-    # city_lst_2 = ['Warsaw']
+    #city_lst_2 = ['Warsaw']
     city_lst_1 = ['Amsterdam', 'Copenhagen', 'Frankfurt', 'London', 'Madrid', 'Marseille', 'Milan', 'Oslo', 'Paris']
     city_lst_2 = ['Berlin', 'Helsinki', 'Prague', 'Stockholm', 'Vienna', 'Warsaw']
 
     for city in city_lst_1:
         plot(f'k5081_100k_25Hz_eu15_48R_1D/k5081_{city}')
-        plot(f'code/2023-EU15/k5081_{city}')
         print(f'{city} done')
 
     for city in city_lst_2:
@@ -33,9 +32,9 @@ def plot(c):
     start = 0
     ip_set = set()
     num_of_ip = []
-    # percentage of total probed channel count
-    # for i in (x * 0.5 for x in range(0, 201)):
-    for i in tqdm(range(0, 101)):
+
+    for i in tqdm((x * 0.5 for x in range(0, 201)), total=201):  # percentage of total probed channel count
+    # for i in tqdm(range(0, 101)):
         idx = 0
         for fn in edgs_fn:
             with open(fn, 'r') as f:
@@ -61,8 +60,14 @@ def plot(c):
     ip_coverage = [n / ttl_ip_cnt for n in num_of_ip]
     city_name = c.split('/')[1][6:]
 
+    for i in range(len(ip_coverage)):
+        if ip_coverage[i] >= 0.8:
+            print(f'{city_name} 80% IP found from top {0.5 * i}% channels')
+            break
+
     fig, ax = plt.subplots(1, 1, figsize=(8, 6))
-    ax.plot([x for x in range(0, 101)], ip_coverage)
+    ax.plot([x * 0.5 for x in range(0, 201)], ip_coverage)
+    # ax.plot([x for x in range(0, 101)], ip_coverage)
     ax.grid()
     plt.title(f'{city_name}')
     plt.xlabel('Top Channel Percentage')
