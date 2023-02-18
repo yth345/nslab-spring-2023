@@ -20,6 +20,13 @@ Backup servers appeared in group 2 and 3.
 Except for London, other cities in group 2 and 3 use UTC + 1.  
 We see most of the backup servers from 17:00 to 9:00 the next day, which is potentially the time the main servers are busy.  
 
-The backup servers appear more in the following time of day for each city:
-- Evening: Copenhagen, Marseille
-- Early in the morning: Berlin, Warsaw, London, Paris
+Summary:
+
+| City       | Date we probe             | More backup servers at |
+| ---------- | ------------------------- | ---------------------- |
+| Berlin     | 01/18 (Wed) - 01/19 (Thu) | Early in the morning   |
+| Copenhagen | 01/15 (Sun) - 01/16 (Mon) | Evening                |
+| Marseille  | 01/11 (Wed) - 01/12 (Thu) | Evening                |
+| Warsaw     | 01/22 (Sun) - 01/23 (Mon) | Early in the morning   |
+| London     | 01/08 (Sun) - 01/09 (Mon) | Midnight               |
+| Paris      | 01/09 (Mon) - 01/10 (Tue) | Midnight               |
