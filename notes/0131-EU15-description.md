@@ -4,7 +4,7 @@
 - Frequency: 25Hz
 - Requested Channel Count: 100k
 - Probed from 15 Cities: Amsterdam, Berlin, Copenhagen, Frankfurt, Helsinki, London, Madrid, Marseille, Milan, Oslo, Paris, Prague, Stockholm, Vienna, Warsaw
-- # of unique IPs found: 1190
+- \# of unique IPs found: 1190
 
 ---
 ### 1. Data Preprocessing
