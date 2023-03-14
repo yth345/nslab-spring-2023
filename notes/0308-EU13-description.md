@@ -3,7 +3,7 @@
 - Time: March 06 ~ 13, year 2023
 - Duration: one day each country
 - Requested Channel Count: 100k
-- Countries: ES(Spain), FR(France), NL(Netherlands), NO(Norway), IT(Italy), DK(Denmark)
+- Countries: ES(Spain), GB(England), FR(France), NL(Netherlands), NO(Norway), IT(Italy), DK(Denmark)
 
 ---
 ### 1. Data Preprocessing
@@ -28,3 +28,11 @@ Path in mbox-02: Samuel/datasets/k5110_100k_EU13_24R
 
 ---
 ### 2. Number of Unique Channels
+Each pixel in the plot represents the # of unique channels that can discover a certain hostname at a certain probing round.
+- Darker color means that there are less # of unique channels served by a server (hostname).  
+- White space at the bottom means that there are fewer hostnames discovered at the location comparing to others.  
+
+#### (1) March 06 ~ 13: ES, GB, FR, NL, NO, IT, DK
+<img src="/images/EU7-unique-ch-cnt.png">
+
+
