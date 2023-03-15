@@ -36,3 +36,39 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 <img src="/images/EU7-unique-ch-cnt.png">
 
 
+---
+### 3. Analysis
+#### (1) Number of EU Edge Servers
+a. Reverse DNS: 1755  
+b. EU15: 737  
+c. EU13: 1098  
+
+#### (2) Cluster Discovery
+Borrowing from Professor Polly's reverse DNS summary, I added two columns to the right, EU15 and EU13.  
+The field colored in yellow are the clusters found from our probes.  
+In dataset EU15, we did not discover `lhr04, ber01, mad02, prg02, waw01, hel01`.  
+In dataset EU13, we did not discover `lhr04, prg02, waw01, hel01`.
+
+<img src="/images/airport-summary.png">
+
+Note that we discovered non-EU clusters in NL and NO.  
+The clusters `hkg06, lax03, sin01, tpe01, tpe03` in NL were due to VPN failure, and thus we should neglect those.  
+However, cluster `tyo05` (Tokyo) were found in NO even though Twitch recognized us as Norwegian clients.
+
+#### (3) Primary Cluster
+| VPN Country | Primary Cluster | Airport City and Country | Matches | Notes |
+| ----------- | --------------- | ------------------------ | ------- | ----- |
+| ES (Spain)  | `prg03`         | Prague, Czech Republic   | N | ES clusters `mad01, mad02` were not found from Spain. |
+| GB (United Kingdom) | `lhr08` | London, United Kingdom   | Y |             |
+| FR (France) | `mrs02`         | Marseille, France        | Y |             |
+| NL (Netherlands) | `prg03`    | Prague, Czech Republic   | N | Only one NL cluster `ams02` was found from Netherlands, the other `ams03` wasn't. | 
+| NO (Norway) | `lhr08`         | London, United Kingdom   | N | NO cluster `osl01` was not found from Norway.
+| IT (Italy)  | `mil02`         | Milan, Italy             | Y |             |
+| DK (Denmark) | `fra06`        | Frankfurt, Germany       | N |             |
+
+Note that in dataset EU15, the primary cluster for Spain is `mad01`, and the primary clusters for Netherlands are exactly `ams02, ams03`.
+
+
+#### (4) Peak/Off-Peak Hours
+dark spot in FR
+
