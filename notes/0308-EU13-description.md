@@ -7,7 +7,9 @@
 
 ---
 ### 1. Data Preprocessing
-Path in mbox-02: Samuel/datasets/k5110_100k_EU13_24R
+<details>
+<summary>Details</summary>
+Path in mbox-02, mbox04: Samuel/datasets/k5110_100k_EU13_24R
 
 #### (1) mapped/
 - Mapped the stream information from `dumps/reqStreams/` to `info/` using `user_login`.
@@ -24,7 +26,7 @@ Path in mbox-02: Samuel/datasets/k5110_100k_EU13_24R
 - Records the # of unique channels (or max viewer count) served by each server at each probing round.
 - columns: `server_code`, `<probe-time-1>`, `<probe-time-2>`, ..., every country has exactly 24 rounds.
 - `server_code` is <3-digits IATA code>.<6-digits hexadecimal server code> from the hostname.   
-
+</details>
 
 ---
 ### 2. Number of Unique Channels
@@ -105,6 +107,7 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 </details>
 
 #### (2) y-axis: Hostname
+<img src="/images/EU13-ch-cnt.png">
 
 ---
 ### 3. Analysis
@@ -128,11 +131,11 @@ However, cluster `tyo05` (Tokyo) were found in NO even though Twitch recognized 
 #### (3) Primary Cluster
 | VPN Country | Primary Cluster | Airport City and Country | Matches | Notes |
 | ----------- | --------------- | ------------------------ | ------- | ----- |
-| ES (Spain)  | `prg03`         | Prague, Czech Republic   | N | ES clusters `mad01, mad02` were not found here. |
+| ES (Spain)  | `dus01` `prg03` | Prague, Czech Republic   | N | ES clusters `mad01, mad02` were not found here. |
 | GB (United Kingdom) | `lhr08` | London, United Kingdom   | Y |             |
 | FR (France) | `mrs02`         | Marseille, France        | Y |             |
-| NL (Netherlands) | `prg03`    | Prague, Czech Republic   | N | Only one NL cluster `ams02` was found from Netherlands, the other `ams03` wasn't. | 
-| NO (Norway) | `lhr08`         | London, United Kingdom   | N | NO cluster `osl01` was not found here. |
+| NL (Netherlands) | `dus01` `prg03` | Prague, Czech Republic | N | Only one NL cluster `ams02` was found from Netherlands, the other `ams03` wasn't. | 
+| NO (Norway) | `ams02` `cdg02` `fra06` `lhr08` `mrs02` | London, United Kingdom   | N | NO cluster `osl01` was not found here. |
 | IT (Italy)  | `mil02`         | Milan, Italy             | Y |             |
 | DK (Denmark) | `fra06`        | Frankfurt, Germany       | N |             |
 | DE (Germany) | `fra06`        | Frankfurt, Germany       | Y |             |
@@ -143,10 +146,21 @@ However, cluster `tyo05` (Tokyo) were found in NO even though Twitch recognized 
 | FI (Finland) | `arn03`        | Stockholm, Sweden        | N |             |
 
 Findings:
-- In DE & AT's case, we get different primary clusters even though Twitch recognized both as German clients.  
-  -> Question: Is the responding edge servers binded to each IP address?
 - If we view cluster as a whole, the load between primary clusters are balanced; however, the load of each edge servers in different primary clusters are different (see ES, NL, NO).
+- In DE & AT's case, we get different primary clusters even though Twitch recognized both as German clients.  
+  -> Question: Is the responding edge servers binded to IP address?
+- For the same set of primary clusters (e.g. `dus01`+`prg03`), is the load similar cross VPN country and cross days?
 
 #### (4) Peak/Off-Peak Hours
-dark spot in FR
+We can see a clear pattern of off-peak hours (7 ~ 12) and peak hours (15 ~ 05).  
+Inside the peak hours interval, there are often two tiny peaks, 19 and 01.  
+  
+Exceptions: 
+- DK: off-peak 23 ~ 09 / peak 11 ~ 20
+- AT: servers drop from 3/15 01:48 ~ 02:25
+- FI: weird
+  
+#### (5) Drops
+
+
 
