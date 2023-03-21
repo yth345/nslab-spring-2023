@@ -1,9 +1,9 @@
 
 ## 0308 Probes from EU-13 Countries
-- Time: March 06 ~ 13, year 2023
+- Time: March 06 ~ 18, year 2023
 - Duration: one day each country
 - Requested Channel Count: 100k
-- Countries: ES(Spain), GB(England), FR(France), NL(Netherlands), NO(Norway), IT(Italy), DK(Denmark)
+- 13 Countries: ES(Spain), GB(England), FR(France), NL(Netherlands), NO(Norway), IT(Italy), DK(Denmark), DE(Germany), CZ(Czech Republic), AT(Austriz), SE(Sweden), PL(Poland), FL(Finland)
 
 ---
 ### 1. Data Preprocessing
@@ -38,9 +38,73 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 <img src="/images/EU7-unique-ch-cnt.png">
 </details>
 
-#### (1) By Cluster
+#### (1) y-axis: Cluster
+<details>
+<summary>March 06 ~ 07: Spain (VPN: es206)</summary>
+<img src="/images/EU13-concise/es206ES-concise.png", width=50%>
+</details>
 
-#### (2) By Hostname
+<details>
+<summary>March 07 ~ 08: UK (VPN: uk2319)</summary>
+<img src="/images/EU13-concise/uk2319GB-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 08 ~ 09: France (VPN: fr867)</summary>
+<img src="/images/EU13-concise/fr867FR-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 09 ~ 10: Netherlands (VPN: nl979)  <sub>VPN failure since 03/09 22:49</sub></summary>
+<img src="/images/EU13-concise/nl979NL-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 10 ~ 11: Norway (VPN: no199)</summary>
+<img src="/images/EU13-concise/no199NO-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 11 ~ 12: Italy (VPN: it238)</summary>
+<img src="/images/EU13-concise/it238IT-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 12 ~ 13: Denmark (VPN: dk255)</summary>
+<img src="/images/EU13-concise/dk255DK-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 13: Germany (VPN: de1090)</summary>
+<img src="/images/EU13-concise/de1090DE-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 13 ~ 14: Czech Republic (VPN: cz98)</summary>
+<img src="/images/EU13-concise/cz98CZ-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 14 ~ 15: Germany (VPN: at130) <sub>VPN failure throughout collection: cannot be recognized as Austria</sub></summary>
+<img src="/images/EU13-concise/at130CZ-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 15 ~ 16: Sweden (VPN: se596) <sub>VPN failure since 03/16 05:16</sub></summary>
+<img src="/images/EU13-concise/se596SE-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 16 ~ 17: Poland (VPN: pl213) <sub>VPN failure since 03/16 10:21</sub></summary>
+<img src="/images/EU13-concise/pl213PL-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 17 ~ 18: Finland (VPN: fi200)</summary>
+<img src="/images/EU13-concise/fi200FI-concise.png", width=50%>
+</details>
+
+#### (2) y-axis: Hostname
 
 ---
 ### 3. Analysis
