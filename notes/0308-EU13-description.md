@@ -32,9 +32,15 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 - Darker color means that there are less # of unique channels served by a server (hostname).  
 - White space at the bottom means that there are fewer hostnames discovered at the location comparing to others.  
 
-#### (1) March 06 ~ 13: ES, GB, FR, NL, NO, IT, DK
-<img src="/images/EU7-unique-ch-cnt.png">
 
+<details>
+<summary>(Old) March 06 ~ 13: ES, GB, FR, NL, NO, IT, DK</summary>
+<img src="/images/EU7-unique-ch-cnt.png">
+</details>
+
+#### (1) By Cluster
+
+#### (2) By Hostname
 
 ---
 ### 3. Analysis
