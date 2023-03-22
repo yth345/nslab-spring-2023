@@ -161,6 +161,11 @@ Exceptions:
 - FI: weird
   
 #### (5) Drops
-
+Paranthesis: unique channel count at that time
+- FR/mrs02: 03/08 21:02 (331) ~ 22:02 (883)
+- AT/prg03: 03/15 01:48 ~ 02:25 (500 ~ 1100)
+- PL/hkg06: 03/16 22:11 (830), 03/17 01:40 (0)
+- FI/waw02: 03/17 08:33 (0) ~ 11:05 (0)
+- FI/fra02: 03/17 12:18 (10)
 
 
