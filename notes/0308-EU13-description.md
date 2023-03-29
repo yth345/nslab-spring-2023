@@ -1,5 +1,6 @@
 
-## 0308 Probes from EU-13 Countries (Dataset: k5110)
+## 0308 Probes from EU-13 Countries
+- Datasets: k5110 (Retry VPN Datasets: k1001 ~ k1004)
 - Time: March 06 ~ 18, year 2023
 - Duration: one day each country
 - Requested Channel Count: 100k
@@ -104,6 +105,28 @@ Each pixel in the plot represents the # of unique channels that can discover a c
 <details>
 <summary>March 17 ~ 18: Finland (VPN: fi200)</summary>
 <img src="/images/EU13-concise/fi200FI-concise.png", width=50%>
+</details>
+  
+__Retry NL, SE, PL, AT__
+
+<details>
+<summary>March 19 ~ 20: Netherlands (VPN: nl1033)</summary>
+<img src="/images/EU13-concise/nl1033-concise.png", width=50%>
+</details>
+
+<details>
+<summary>March 20 ~ 21: Sweden (VPN: se597)</summary>
+<img src="/images/EU13-concise/se597-concise.png", width=50%>
+</details>
+  
+<details>
+<summary>March 21 ~ 22: Poland (VPN: pl220)</summary>
+<img src="/images/EU13-concise/pl220-concise.png", width=50%>
+</details>
+  
+<details>
+<summary>March 21 ~ 22: Austria (VPN: at120)</summary>
+<img src="/images/EU13-concise/at120-concise.png", width=50%>
 </details>
 
 #### (2) y-axis: Hostname
