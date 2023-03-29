@@ -163,14 +163,14 @@ However, cluster `tyo05` (Tokyo) were found in NO even though Twitch recognized 
 | DK (Denmark) | `fra06`        | Frankfurt, Germany       | N |             |
 | DE (Germany) | `fra06`        | Frankfurt, Germany       | Y |             |
 | CZ (Czech Republic) | `prg03` | Prague, Czech Republic   | Y |             |
-| AT (Austria) | `prg03`        | Prague, Czech Republic   | N | Recognize as German clients by Twitch. AT cluster `vie02` was not found here.|
+| AT (Austria) | `prg03`        | Prague, Czech Republic   | N | AT cluster `vie02` was not found here.|
 | SE (Sweden)  | `arn04`        | Stockholm, Sweden        | Y |             |
 | PL (Poland)  | `waw02`        | Warsaw, Poland           | Y |             |
 | FI (Finland) | `arn03`        | Stockholm, Sweden        | N |             |
 
 Findings:
 - If we view cluster as a whole, the load between primary clusters are balanced; however, the load of each edge servers in different primary clusters are different (see ES, NL, NO).
-- In DE & AT's case, we get different primary clusters even though Twitch recognized both as German clients.  
+- In DE & first AT's case, we get different primary clusters even though Twitch recognized both as German clients.  
   -> Question: Is the responding edge servers binded to IP address?
 - For the same set of primary clusters (e.g. `dus01`+`prg03`), is the load similar cross VPN country and cross days?
 
@@ -180,7 +180,7 @@ Inside the peak hours interval, there are often two tiny peaks, 19 and 01.
   
 Exceptions: 
 - DK: off-peak 23 ~ 09 / peak 11 ~ 20
-- AT: servers drop from 3/15 01:48 ~ 02:25
+- PL: low at 18 ~20, and servers drop at 3/22 08:36 ~ 14:29
 - FI: weird
   
 #### (5) Drops
