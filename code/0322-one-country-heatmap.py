@@ -17,7 +17,7 @@ def process_data(c_path):
     pb_time_list = []
     sv_list = sorted(glob.glob(os.path.join(f'./{c_path}/server', '*.tsv')))
     for path in sv_list:
-        pb_time = path.split('/')[-1][3:-5]
+        pb_time = path.split('/')[-1].lstrip(country)[1:-5]
         pb_time_list.append(pb_time)
         with open(path, 'r') as f:
             f.readline()
