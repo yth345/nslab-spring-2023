@@ -34,3 +34,28 @@ The plots are drawn by selecting the top N channels in each probing rounds, and 
 <img src="/images/log-EU13-ttl-ip-coverage.png" width="600">
 
 
+### 3. \# of Channels Needed
+| Coverage | # of Channels (Sorted by Viewer Count) |
+| -------- | -------------------------------------- |
+| 0.6      | 491 |
+| 0.7      | 724 |
+| 0.8      | 1152 |
+| 0.9      | 2686 |
+| 0.95     | 7999 |
+| 0.99     | 38680 |
+
+| Top N Channels | Coverage |
+| -------------- | -------- |
+| 1000           | 0.7691   |
+| 2000           | 0.8715   |
+| 3000           | 0.9063   |
+| 5000           | 0.9262   |
+| 10000          | 0.9635   |
+
+Probing the top 3000 channels, which is the top 3% viewer count channels, can give us an IP coverage of 90.63%. 
+
+If we want a 95% coverage, we will need to probe the top 8% viewer count channels,  
+and if we want an even better coverage, 99%, we will need to probe the top 39% viewer count channels.
+
+
+
