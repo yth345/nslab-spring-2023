@@ -18,6 +18,13 @@ The aggregation is done by selecting the top N channels in each probing rounds i
 <img src="/images/agg-EU-13-ip-coverage.png">
 </details>
 
+<details>
+<summary>Plot Aggregated Rounds (Only include edges that appear >= 10 times)</summary>
+Although in most of the countries, IP coverage ratio coverages to 1.0 faster,   
+UK surprisingly converges slower, and SE does not change much.
+<img src="/images/ge-10-agg-ip-coverage.png">
+</details>
+
 From the aggregated plots, we can categorize the countries into 4 groups:  
 (1) `UK, NL, PL`: Nice concave curve, covered all IPs by top 10000 channels  
 (2) `ES, NO, DK, FI, SE`: Got a good coverage in the beginning, but struggle to get the last few IPs  
