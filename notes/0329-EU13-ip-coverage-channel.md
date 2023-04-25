@@ -41,19 +41,19 @@ __b. denominator: # of IPs from rDNS (excluding lhr04, prg02, waw01, hel01)__
 #### (1) x-axis: linear channels
 | a. | b. |
 | -- | -- |
-| <img src="/images/EU13-ttl-ip-coverage.png" width="400"> | <img src="/images/cmp-rDNS-EU13-ip-coverage.png" width="400"> |
+| <img src="/images/EU13-ttl-ip-coverage.png" width="400"> | <img src="/images/n-cmp-rDNS-EU13-ip-coverage.png" width="400"> |
 
 #### (2) x-axis: log channels
 | a. | b. |
 | -- | -- |
-| <img src="/images/log-EU13-ttl-ip-coverage.png" width="400"> | <img src="/images/cmp-rDNS-log-EU13-ip-coverage.png" width="400"> |
+| <img src="/images/log-EU13-ttl-ip-coverage.png" width="400"> | <img src="/images/n-cmp-rDNS-log-EU13-ip-coverage.png" width="400"> |
 
 
 ### 3. \# of Channels Needed
 | Coverage | # of Channels (a.) | # of Channels (b.) |
 | -------- | ------------------ | ------------------ |
-| 0.6      | 491   | 1524  |
-| 0.7      | 724   | 39757 |
+| 0.6      | 491   | 2020  |
+| 0.7      | 724   | -     |
 | 0.8      | 1152  | -     |
 | 0.9      | 2686  | -     |
 | 0.95     | 7999  | -     |
@@ -61,12 +61,12 @@ __b. denominator: # of IPs from rDNS (excluding lhr04, prg02, waw01, hel01)__
 
 | Top N Channels | a. Coverage | b. Coverage |
 | -------------- | ----------- | ----------- | 
-| 1000           | 76.91%      | 54.26%      |
-| 2000           | 87.15%      | 61.48%      |
-| 3000           | 90.63%      | 63.93%      |
-| 5000           | 92.62%      | 65.34%      |
-| 10000          | 96.35%      | 67.97%      |
-| 40000          | 99.48%      | 70.18%      |
+| 1000           | 76.91%      | 52.97%      |
+| 2000           | 87.15%      | 59.95%      |
+| 3000           | 90.63%      | 61.85%      |
+| 5000           | 92.62%      | 63.07%      |
+| 10000          | 96.35%      | 63.87%      |
+| 40000          | 99.48%      | 63.99%      |
 
 Probing the top 3000 channels, which is the top 3% viewer count channels, can give us an IP coverage of 90.63%. 
 
