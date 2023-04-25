@@ -137,7 +137,7 @@ __Retry NL, SE, PL, AT__
 #### (1) Number of EU Edge Servers
 a. Reverse DNS: 1755  
 b. EU15: 737  
-c. EU13: 1150 (exclude VPN failure: 1047)  
+c. EU13: 1150 (exclude non-EU: 1047)  
 
 #### (2) Cluster Discovery
 Borrowing from Professor Polly's reverse DNS summary, I added two columns to the right, EU15 and EU13.  
