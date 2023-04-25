@@ -35,8 +35,8 @@ From the aggregated plots, we can categorize the countries into 4 groups:
 ### 2. IP Coverage Ratio All Together
 The plots are drawn by selecting the top N channels in each probing rounds, and calculate their IP coverage ratio.  
 
-a. denominator: # of IPs we found in k5110, k1001 ~ k1004   
-b. denominator: # of IPs from rDNS (excluding lhr04, prg02, waw01, hel01)  
+__a. denominator: # of IPs we found in k5110, k1001 ~ k1004__   
+__b. denominator: # of IPs from rDNS (excluding lhr04, prg02, waw01, hel01)__   
 
 #### (1) x-axis: linear channels
 | a. | b. |
