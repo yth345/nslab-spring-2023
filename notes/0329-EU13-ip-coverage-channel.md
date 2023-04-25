@@ -35,30 +35,38 @@ From the aggregated plots, we can categorize the countries into 4 groups:
 ### 2. IP Coverage Ratio All Together
 The plots are drawn by selecting the top N channels in each probing rounds, and calculate their IP coverage ratio.  
 
+a. denominator: # of IPs we found in k5110, k1001 ~ k1004   
+b. denominator: # of IPs from rDNS (excluding lhr04, prg02, waw01, hel01)  
+
 #### (1) x-axis: linear channels
-<img src="/images/EU13-ttl-ip-coverage.png" width="600">
+| a. | b. |
+| -- | -- |
+| <img src="/images/EU13-ttl-ip-coverage.png" width="400"> | <img src="/images/cmp-rDNS-EU13-ip-coverage.png" width="400"> |
 
 #### (2) x-axis: log channels
-<img src="/images/log-EU13-ttl-ip-coverage.png" width="600">
+| a. | b. |
+| -- | -- |
+| <img src="/images/log-EU13-ttl-ip-coverage.png" width="400"> | <img src="/images/cmp-rDNS-log-EU13-ip-coverage.png" width="400"> |
 
 
 ### 3. \# of Channels Needed
-| Coverage | # of Channels (Sorted by Viewer Count) |
-| -------- | -------------------------------------- |
-| 0.6      | 491 |
-| 0.7      | 724 |
-| 0.8      | 1152 |
-| 0.9      | 2686 |
-| 0.95     | 7999 |
-| 0.99     | 38680 |
+| Coverage | # of Channels (a.) | # of Channels (b.) |
+| -------- | ------------------ | ------------------ |
+| 0.6      | 491   | 1524  |
+| 0.7      | 724   | 39757 |
+| 0.8      | 1152  | -     |
+| 0.9      | 2686  | -     |
+| 0.95     | 7999  | -     |
+| 0.99     | 38680 | -     |
 
-| Top N Channels | Coverage |
-| -------------- | -------- |
-| 1000           | 0.7691   |
-| 2000           | 0.8715   |
-| 3000           | 0.9063   |
-| 5000           | 0.9262   |
-| 10000          | 0.9635   |
+| Top N Channels | a. Coverage | b. Coverage |
+| -------------- | ----------- | ----------- | 
+| 1000           | 76.91%      | 54.26%      |
+| 2000           | 87.15%      | 61.48%      |
+| 3000           | 90.63%      | 63.93%      |
+| 5000           | 92.62%      | 65.34%      |
+| 10000          | 96.35%      | 67.97%      |
+| 40000          | 99.48%      | 70.18%      |
 
 Probing the top 3000 channels, which is the top 3% viewer count channels, can give us an IP coverage of 90.63%. 
 
