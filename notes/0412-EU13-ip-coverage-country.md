@@ -50,3 +50,11 @@ it is hard to see the relative contribution by this graph.
 #### (2) Overlap Server Rate
 <img src="/images/overlap-ratio.png" width="500">
 
+Each row represents the overlapping pencentage of each VPN in the x-axis with respect to the total # of IPs in that VPN row.  
+For example, position (2, 1) = 6 means that 
+```math
+{| \text{es206.IPset} ∩ \text{uk2319.IPset} | \over | \text{uk2319.IPset} |}  = 6\%
+```
+
+A brighter row means that the VPN of that row overlaps with other VPNs more, which means that it may be more useless.  
+A brighter column means that the VPN of that column covers more percentage of other VPNs, which means that we should include it.
