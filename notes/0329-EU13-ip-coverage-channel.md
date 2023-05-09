@@ -70,4 +70,16 @@ __b. denominator: # of IPs from rDNS (excluding lhr04, prg02, waw01, hel01)__
 
 Probing the top 3000 channels, which is the top 3% viewer count channels, can give us an IP coverage of 96.56% out of all IPs we could possibly find, and an IP coverage of 61.85% out of all IPs from rDNS. 
 
+### 4. Most v.s. Least Viewer Count First
+#### (1) Common Servers (servers that servers >= 10 channels)
+<img src="/images/cdf-ge10-r.png" width="400">
 
+#### (2) All Servers, in Groups
+- Group 1
+<img src="/images/cdf-g1-da.png" width="400">
+- Group 2
+<img src="/images/cdf-g2-da.png" width="400">
+- Group 3
+<img src="/images/cdf-g3-da.png" width="400">
+- Group 4
+<img src="/images/cdf-g4-da.png" width="400">
